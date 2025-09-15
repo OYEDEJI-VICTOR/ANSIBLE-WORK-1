@@ -1,0 +1,13 @@
+---
+- name: Ensure /opt/devops directory exists
+  hosts: N4
+  become: yes   
+  tasks:
+    - name: Create /opt/devops directory
+      file:
+        path: /opt/devops
+        state: directory
+        mode: '0755'
+        owner: root
+        group: root
+...        
